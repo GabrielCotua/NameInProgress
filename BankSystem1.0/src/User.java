@@ -1,11 +1,11 @@
 import java.util.Random;
+import java.io.File;
 
 public class User {
     int UUID;
     String username;
     String passwd;
     double money;
-    Random random = new Random();
 
     public User() {
         UUID = 0;
@@ -13,6 +13,11 @@ public class User {
         passwd = "";
         money = 0.0;
     }
+    public User(String Username, String Password){
+        username = Username;
+        passwd = Password;
+    }
+
 
     public void setUsername(String name){
         this.username = name;
@@ -35,7 +40,9 @@ public class User {
         this.money -= amount;
     }
 
+    //terminar algun dia
     public boolean userExist(User user, String UUID) {
+        //File userList = new File();
         return true;
     }
 
@@ -47,8 +54,5 @@ public class User {
         }
 
     }
-
-
-
 
 }
